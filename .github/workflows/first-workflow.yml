@@ -11,9 +11,11 @@ jobs:
   job1:
     runs-on: ubuntu-latest
 
+    env:
+      ECHO_TEXT: "RDT is awesome!"
     steps:
       - name: Step 1
-        run: echo "step1"
+        run: echo "${{ env.ECHO_TEXT }}"
 
       - name: Step 2
         run: echo "step2"
@@ -21,7 +23,8 @@ jobs:
   job2:
       needs: job1
       runs-on: ubuntu-latest
-
+      env:
+        ECHO_TEXT: "RDT is awesome!"
       steps:
         - name: Call cowsays action
           uses: actions/checkout@v2
@@ -29,4 +32,4 @@ jobs:
         - name: Run cowsays
           uses: mscoutermarsh/cowsays-action@master
           with:
-            text: "Hello from RDT!"
+            text: "${{ env.ECHO_TEXT }}"
