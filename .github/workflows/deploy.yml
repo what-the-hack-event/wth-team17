@@ -44,4 +44,4 @@ jobs:
           app-name: ${{ steps.Bicep.outputs.application_name }}
           slot-name: 'production' # optional
           # publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: '${{ secrets.ACR_LOGIN_SERVER }}/wth/dotnetcoreapp:12'
+          images: '${{ secrets.ACR_LOGIN_SERVER }}/wth/dotnetcoreapp:15'
