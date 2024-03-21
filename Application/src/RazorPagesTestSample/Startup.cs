@@ -11,6 +11,7 @@ namespace RazorPagesTestSample
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            // I'm a comment
             services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("InMemoryDb"));
 
             services.AddRazorPages();
