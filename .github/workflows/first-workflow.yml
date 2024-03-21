@@ -5,18 +5,18 @@ on:
     branches:
       - main
 
-  jobs:
-    job1:
-      runs-on: ubuntu-latest
+jobs:
+  job1:
+    runs-on: ubuntu-latest
 
-      steps:
-        - name: Step 1
-          run: echo "step1"
+    steps:
+      - name: Step 1
+        run: echo "step1"
 
-        - name: Step 2
-          run: echo "step2"
+      - name: Step 2
+        run: echo "step2"
 
-    job2:
+  job2:
       runs-on: ubuntu-latest
 
       steps:
