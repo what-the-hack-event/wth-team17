@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+  issues:
+    types: [opened]
 
 jobs:
   job1:
@@ -27,4 +29,4 @@ jobs:
         - name: Run cowsays
           uses: mscoutermarsh/cowsays-action@master
           with:
-            text: "Hello from cowsay"
+            text: "Hello from RDT!"
