@@ -13,7 +13,7 @@ namespace RazorPagesTestSample
         public static void Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
-
+            // Another.  
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
