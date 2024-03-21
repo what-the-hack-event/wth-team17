@@ -18,4 +18,4 @@ jobs:
         with:
           subscriptionId: ${{ secrets.AZURE_CREDENTIALS.subscriptionId }}
           resourceGroupName: ${{ vars.RG_NAME }}
-          template: ./InfrastructureAsCode/main.bicep
+          template: ../InfrastructureAsCode/main.bicep
