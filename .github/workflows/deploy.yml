@@ -18,6 +18,5 @@ jobs:
               with:
                 azcliversion: 2.28.0
                 inlineScript: |
-                  ls
-                  az deployment sub create --location uksouth --template-file ${{ github.workspace }}/InfrastructureAsCode/main.bicep
+                  az deployment sub create --location uksouth --template-file /home/runner/work/wth-team17/InfrastructureAsCode/main.bicep
 
