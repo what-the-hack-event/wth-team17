@@ -6,7 +6,7 @@ on:
       environment:
         description: 'Deployment environment'
         required: true
-        default: 'prod'
+        default: 'dev'
 
 jobs:
   Deploy-Resources:
