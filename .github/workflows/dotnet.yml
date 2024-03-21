@@ -30,3 +30,17 @@ jobs:
       run: dotnet build --no-restore Application/src/RazorPagesTestSample/RazorPagesTestSample.csproj
     - name: Test
       run: dotnet test --no-build --verbosity normal Application/src/RazorPagesTestSample/RazorPagesTestSample.csproj
+
+    - name: Create issue on failure
+      if: ${{ failure() }}
+      uses: actions/github-script@v4
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
+        script: |
+          const issue = {
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: "Build failed",
+            body: `The build failed on ${context.sha}. Please check the logs for more information.`,
+          };
+          github.rest.issues.create(issue);
