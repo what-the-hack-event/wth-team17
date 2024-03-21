@@ -28,3 +28,4 @@ jobs:
           subscriptionId: ${{ secrets.AZURE_CREDENTIALS.subscriptionId }}
           resourceGroupName: ${{ vars.RG_NAME }}
           template: ./InfrastructureAsCode/main.bicep
+          parameters: environment=${{ github.event.inputs.environment }}
